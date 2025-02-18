@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Encryption</title>
+</head>
+<body>
+    <h2>Hashing com SHA-256</h2>
+    <form action="/generate_hash" method="POST">
+        Digite sua senha: <input type="password" name="hash_input" placeholder="Senha" required>
+        <button type="submit">Gerar hash</button>
+    </form>
+    <h3>Resultado: {% if result_hash %}{{ result_hash }}{% endif %}</h3>
+
+    <br><br>
+
+    <h2>Criptografia com AES</h2>
+    <form action="/encrypt" method="POST" style="margin-bottom: 10px;">
+        Digite uma mensagem: <input type="text" name="aes_input" placeholder="Mensagem secreta" required>
+        <button type="submit">Gerar criptografia</button>
+    </form>
+    
+    <form action="/decrypt" method="POST">
+        Mensagem criptografada: <input type="text" name="aes_input" placeholder="Mensagem criptografada" required>
+        <button type="submit">Descriptografar</button>
+    </form>
+
+    <h3>Mensagem Criptografada: {% if encrypted_msg %}{{ encrypted_msg }}{% endif %}</h3>
+    <h3>Mensagem Descriptografada: {% if decrypted_msg %}{{ decrypted_msg }}{% endif %}</h3>
+</body>
+</html>
