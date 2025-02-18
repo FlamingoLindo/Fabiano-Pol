@@ -41,7 +41,7 @@ Agora basta utilizar a aplicação...
 
 ## Como fuciona
 
-1. Hashing com SHA-256
+**1. Hashing com SHA-256**
 
 O primeiro formulário permite ao usuário gerar um hash da sua senha utilizando o algoritmo SHA-256.
 
@@ -70,7 +70,7 @@ Explicação do Código:
 
 ---
 
-2. Criptografia com AES
+**2. Criptografia com AES**
 
 O segundo formulário permite ao usuário criptografar uma mensagem usando o algoritmo AES (Advanced Encryption Standard) em modo CBC. Há também um formulário para descriptografar mensagens previamente criptografadas.
 
